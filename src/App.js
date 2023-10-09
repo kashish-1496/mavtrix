@@ -23,7 +23,7 @@ export default function page2(){
   return(
     <div className="page2-ui">
 
-      <div className="left-box2">
+      <div className="left-box2 changes">
       
         <div className="logo-container">
             <div className="logo"></div>
