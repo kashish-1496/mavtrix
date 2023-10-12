@@ -1,51 +1,149 @@
 import "./App.css";
 import layout from './images/ui.png';
-import React , {useState}from "react";
-import { useEffect } from "react";
-// function Join(){
-  // const handleClick=()=>{
-  //   console.log("clicked");
-  //   return page2();
-  // }
+import link_img from './images/link_img.png';
+import copy_img from './images/copy_img.png';
+import React , {useState, useCallback } from "react";
+// import { useEffect } from "react";
 
-   function Page5(){
-    // console.log("page5 re rendered")
+
+function Feedback(){
+  const[skipClick,setSkipClick] = useState(false);
+  const handleSkip=()=>{setSkipClick(true);};
+
+  return(
+    <div>
+      {skipClick?(<Home_page/>):(
+         <div className="feed">
+         <div className="logo-container">
+             <div className="logo"></div>
+             <div className="top-left">Mavtrix</div>
+         </div>
+ 
+         <div className="feed_heading">Thanks for choosing us. We would be grateful to hear about your experience.</div>
+ 
+         <div className="feedtext">Your Feedback -</div>
+         <div className="skip" onClick={handleSkip}>Skip</div>
+       </div>
+      )}
+  </div>
+  );
+}
+
+ function Mymeetings(){
+    const[showPage,setShowPage]=useState(false);
+    const handleBack=()=>{setShowPage(true);};
+
     return(
-      <div className="page5">
-        {/* <div className="headingof5">Create a new Meeting</div> */}
-        <div className="leftbox5">
+      <div>
+        {showPage?(<Page4/>):(
+          // console.log("updated showpage",showPage);
+          <div className="page7">
+            <div className="logo-container">
+              <div className="logo"></div>
+              <div className="top-left">Mavtrix</div>
+            </div>
+    
+            <div className="mymeethead">My Meetings</div>
+            <div className="blackbox"></div>
+            <button className="back" onClick={handleBack}>- Back</button>
+          </div>
+        ) 
+      }
+    </div>
+  );
+    }
+
+   function Page6(){
+    return(
+      <div className="page6">
+        <div className="left-box">
+
           <div className="logo-container">
             <div className="logo"></div>
             <div className="top-left">Mavtrix</div>
           </div>
 
-          <div className="infoname">
-            <div className="newkopt">Meeting Agenda :</div>
-            <div className="newkopt">Time :</div>
-            <div className="newkopt">Room Size :</div>
-            <div className="newkopt">Maximum Participants :</div>
-          </div>
-        </div>
+          <div className="name">Mavtrix</div>
 
-        <div className="rightbox5">
-          <div className="infoentry">
-            <div className="info1"></div>
-            <div className="info2"></div>
-            <div className="info3"></div>
-            <div className="info4"></div>
+          <div className="content">First Indian video conferencing application with sound spatilisation features</div>
+
+          <div className="linktext">Here is your Meeting Link : </div>
+          <div className="linkbutton">
+            <img className="link_img" src={link_img}/>
+            <div className="link_txt">https://your_link_will_be_generated</div>
+            <img className="copy_img" src={copy_img}/>
           </div>
-          <div className="schedule">Schedule Meeting</div>
+
+          </div>
+
+          <div className="right-box">
+
+          <div className="images">
+            <img className="first" src= {layout}/>
+            <img className="second" src= {layout}/>
+            <img className="third" src= {layout}/>
+          </div>
         </div>
       </div>
+    );
+  }
+  function Page5(){
+    // console.log("page5 re rendered")
+    const[showMymeetings,setShowMymeetings]=useState(false);
+    const handleSchedule=()=>{setShowMymeetings(true);};
+
+    return(
+      <div>
+        {showMymeetings?(<Mymeetings/>):(
+          <div className="page5">
+          <div className="divheading">
+            <div className="headingof5">Create a new Meeting</div>
+          </div>
+  
+          <div className="leftbox5">
+            <div className="logo-container">
+              <div className="logo"></div>
+              <div className="top-left">Mavtrix</div>
+            </div>
+  
+            <div className="infoname">
+              <div className="newkopt">Meeting Agenda :</div>
+              <div className="newkopt">Time :</div>
+              <div className="newkopt">Room Size :</div>
+              {/* <div className="newkopt"> Participants :</div> */}
+            </div>
+          </div>
+  
+          <div className="rightbox5">
+            <div className="infoentry">
+              <div className="info1"></div>
+              <div className="info2"></div>
+              <div className="info3"></div>
+              {/* <div className="info4"></div> */}
+            </div>
+            <div className="schedule" onClick={handleSchedule}><div>Schedule Meeting</div></div>
+          </div>
+        </div>
+        )}
+      </div>
+      
 
     );
   }
- function Page4(){
-    const[showPage5,setShowPage5]=useState(false);
 
-     useEffect(() => {
-      //  console.log("showPage5 has changed", showPage5);
-     }, [showPage5]);
+  function Page4(){
+    const[showPage5,setShowPage5]=useState(false);
+    const handleNewMeet=()=>{setShowPage5(true);};
+    
+    const[showMymeetings,setShowMymeetings]=useState(false);
+    const handleMymeet=()=>{setShowMymeetings(true);};
+
+    const[showLink,setShowLink]=useState(false);
+    const handleInstant =()=>{setShowLink(true);};
+
+    //  useEffect(() => {
+    //   //  console.log("showPage5 has changed", showPage5);
+    //  }, [showPage5]);
 
     //  const handleNewMeet = () => {
     //    console.log("Before state update, showPage5:", showPage5);
@@ -56,9 +154,6 @@ import { useEffect } from "react";
     //  console.log("state of showpage5", showPage5);
 
 
-     const handleNewMeet=()=>{ 
-       setShowPage5(true);
-      };
        // setShowPage5((prev) => {
        //   console.log("showPage5 inside handleNewMeet:", prev);
        //   return true;
@@ -67,28 +162,30 @@ import { useEffect } from "react";
     // console.log("showPage5",showPage5);
 
     return(
-      <div className="app5">
-        {showPage5?(<Page5/>):(
+      <div>
+        {showLink?(<Page6/>):(
             <div className="page4">
             <div className="left-box">
-            <div className="logo-container">
-              <div className="logo"></div>
-              <div className="top-left">Mavtrix</div>
+              <div className="logo-container">
+                <div className="logo"></div>
+                <div className="top-left">Mavtrix</div>
+              </div>
+
+              <div className="name">Mavtrix</div>
+                
+              <div className="content">First Indian video conferencing application with sound spatilisation features</div>
+
+              <button className="meeting_options" style={{marginBottom:'15px'}}> Meeting Options</button>
+
+              <div>
+                <div className="furtheroptions">
+                  <div className="opt" onClick={handleInstant}>+ Start an instant meeting</div>
+                  <div className="opt" onClick={handleNewMeet}>~ Start a new meeting for later</div>
+                  <div className="opt" onClick={handleNewMeet}>+ Schedule in Google Calender</div>
+                  <div className="opt" onClick={handleMymeet}>+ My Meetings</div>
+                </div>       
+              </div>
             </div>
-            <div className="name">Mavtrix</div>
-            <div className="content">First Indian video conferencing application with sound spatilisation features</div>
-            <button className="meeting_options" style={{marginBottom:'15px'}}> Meeting Options</button>
-            <div>
-              <div className="furtheroptions">
-                <div className="opt">+ Start an instant meeting</div>
-                <div className="opt" onClick={handleNewMeet}>~ Start a new meeting for later</div>
-                <div className="opt" onClick={handleNewMeet}>+ Schedule in Google Calender</div>
-                <div className="opt">+ My Meetings</div>
-              </div>       
-            </div>
-    
-    
-          </div>
     
           <div className="right-box">
             <div className="images">
@@ -97,10 +194,78 @@ import { useEffect } from "react";
               <img className="third" src= {layout}/>
             </div>
           </div>
-          </div>
+        </div>
         )}
-      </div> 
-    )
+
+        {showMymeetings?(<Mymeetings/>):(
+        <div className="page4">
+            <div className="left-box">
+              <div className="logo-container">
+                <div className="logo"></div>
+                <div className="top-left">Mavtrix</div>
+              </div>
+
+              <div className="name">Mavtrix</div>
+                
+              <div className="content">First Indian video conferencing application with sound spatilisation features</div>
+
+              <button className="meeting_options" style={{marginBottom:'15px'}}> Meeting Options</button>
+
+              <div>
+                <div className="furtheroptions">
+                  <div className="opt" onClick={handleInstant}>+ Start an instant meeting</div>
+                  <div className="opt" onClick={handleNewMeet}>~ Start a new meeting for later</div>
+                  <div className="opt" onClick={handleNewMeet}>+ Schedule in Google Calender</div>
+                  <div className="opt" onClick={handleMymeet}>+ My Meetings</div>
+                </div>       
+              </div>
+            </div>
+    
+          <div className="right-box">
+            <div className="images">
+              <img className="first" src= {layout}/>
+              <img className="second" src= {layout}/>
+              <img className="third" src= {layout}/>
+            </div>
+          </div>
+        </div>
+      )}
+
+        {showPage5?(<Page5/>):(
+          <div className="page4">
+            <div className="left-box">
+              <div className="logo-container">
+                <div className="logo"></div>
+                <div className="top-left">Mavtrix</div>
+              </div>
+
+              <div className="name">Mavtrix</div>
+                
+              <div className="content">First Indian video conferencing application with sound spatilisation features</div>
+
+              <button className="meeting_options" style={{marginBottom:'15px'}}> Meeting Options</button>
+
+              <div>
+                <div className="furtheroptions">
+                  <div className="opt">+ Start an instant meeting</div>
+                  <div className="opt" onClick={handleNewMeet}>~ Start a new meeting for later</div>
+                  <div className="opt" onClick={handleNewMeet}>+ Schedule in Google Calender</div>
+                  <div className="opt" onClick={handleMymeet}>+ My Meetings</div>
+                </div>       
+              </div>
+            </div>
+    
+          <div className="right-box">
+            <div className="images">
+              <img className="first" src= {layout}/>
+              <img className="second" src= {layout}/>
+              <img className="third" src= {layout}/>
+            </div>
+          </div>
+        </div>
+      )}
+    </div> 
+  );
   }
 
   function Page3(){
@@ -109,7 +274,7 @@ import { useEffect } from "react";
     const meetingOptions=()=>{setShowPage4(true);};
 
     return(
-      <div className="app3">
+      <div>
         {showPage4?(<Page4/>):(
 
         <div className="page3">
@@ -134,20 +299,18 @@ import { useEffect } from "react";
               <img className="third" src= {layout}/>
             </div>
           </div>
-      </div>
-    )}</div>
+        </div>
+      )}
+    </div>
   );
-}
+  }
 
 
   function Page2() {
 
-    const [showPage3,setShowPage3]=useState(false);
-    const handleSigninClick=()=>{setShowPage3(true);};
-
    return(
-    <div className="app2">
-      {showPage3?(<Page3/>):(
+    <div>
+      
 
       <div className="page2">
   
@@ -177,20 +340,15 @@ import { useEffect } from "react";
          <button className="signin" onClick={handleSigninClick}>Sign in with Google</button>
        </div>
       </div>
-    )}
-    </div>
-    );
+  </div>
+  );
   }
   
 
-  export default function Home_page(){
-
-    const[showPage2,setShowPage2]=useState(false);
-    const handleJoinClick=()=>{setShowPage2(true);};
+   function Home_page({ gotoPage }){
 
     return(
-      <div className="app">
-        {showPage2?(<Page2/>):(
+      <div>
 
         <div className="page1">
 
@@ -205,7 +363,7 @@ import { useEffect } from "react";
 
             <div className="content">First Indian video conferencing application with sound spatilisation features</div>
 
-            <button className="join" onClick={handleJoinClick}>Join</button>
+            <button className="join" onClick={() => gotoPage(<Page2 />)}>Join</button>
 
           </div>
 
@@ -219,9 +377,22 @@ import { useEffect } from "react";
           </div>
           {/* {showPage2 && <Page2/>} */}
         </div>
-      )}
     </div>
   );
 }
 
 // export default home_page
+export default function CustomRouter(){
+
+  function changePage(page) {
+    setCurrentPage(page);
+  }
+  const homepage = <Home_page gotoPage={changePage} />;
+  const [currentPage,setCurrentPage]=useState(homepage);
+  // console.log(currentPage);
+  return(
+    <div>
+      {currentPage}
+    </div>
+  );
+}
