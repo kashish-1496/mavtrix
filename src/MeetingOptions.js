@@ -16,7 +16,7 @@ export default function Page3() {
                 </div>
                 <div className="name">Mavtrix</div>
                 <div className="content">First Indian video conferencing application with sound spatilisation features</div>
-                <Link to='Furtheroptions'>
+                <Link to='/FurtherOptions'>
                     <button className="meeting_options" > Meeting Options</button>
                 </Link>
 

@@ -5,6 +5,9 @@ import Join from './Join';
 import Signin from './Signin';
 import MeetingOptions from './MeetingOptions';
 import FurtherOptions from './FurtherOptions';
+import Link from './Link';
+import CreateNewMeet from './CreateNewMeet';
+import Mymeetings from './MyMeetings';
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -28,6 +31,18 @@ const router = createBrowserRouter([
   {
     path:"/FurtherOptions",
     element:<FurtherOptions/>
+  },
+  {
+    path:"/Link",
+    element:<Link/>
+  },
+  {
+    path:"/CreateNewMeet",
+    element:<CreateNewMeet/>
+  },
+  {
+    path:"/MyMeetings",
+    element:<Mymeetings/>
   }
 ]);
 

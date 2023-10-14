@@ -3,7 +3,7 @@ import layout from './images/ui.png';
 import link_img from './images/link_img.png';
 import copy_img from './images/copy_img.png';
 import React, { useState, useCallback } from "react";
-function Page6() {
+export default function Page6() {
     return (
         <div className="page6">
             <div className="left-box">
