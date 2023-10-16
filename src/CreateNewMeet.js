@@ -20,8 +20,8 @@ export default function Page5() {
           </div>
           <div className="infoname">
             <div className="newkopt">Meeting Agenda :</div>
-            <div className="newkopt">Time :</div>
-            <div className="newkopt">Room Size :</div>
+            <div className="newkopt">Date & Time :</div>
+            {/* <div className="newkopt">Room Size :</div> */}
             {/* <div className="newkopt"> Participants :</div> */}
           </div>
         </div>
@@ -29,11 +29,13 @@ export default function Page5() {
           <div className="infoentry">
             <div className="info1"></div>
             <div className="info2"></div>
-            <div className="info3"></div>
+            {/* <div className="info3"></div> */}
             {/* <div className="info4"></div> */}
           </div>
           <Link to='/MyMeetings'>
-            <div className="schedule" ><div>Schedule Meeting</div></div>
+            <div className="schedule" ><div>Schedule Meeting</div>
+            {/* </br> */}
+            <div className="scheduletocalender">Schedule in Google Calender</div></div>
           </Link>
 
         </div>

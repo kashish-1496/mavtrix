@@ -8,6 +8,7 @@ import FurtherOptions from './FurtherOptions';
 import Link from './Link';
 import CreateNewMeet from './CreateNewMeet';
 import Mymeetings from './MyMeetings';
+import Feedback  from './Feedback';
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -18,7 +19,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Join/>,
+    element: <Feedback />,
   },
   {
     path:"/login",
