@@ -1,11 +1,13 @@
-import "./App.css";
-import layout from './images/ui.png';
-import link_img from './images/link_img.png';
-import copy_img from './images/copy_img.png';
+import "../css-files/App.css";
+import "../css-files/join.css";
+import layout from '../images/ui.png';
 import React, { useState, useCallback } from "react";
-export default function Page6() {
+import { Link } from "react-router-dom";
+
+
+export default function Home_page() {
     return (
-        <div className="page6">
+        <div className="page1">
             <div className="left-box">
                 <div className="logo-container">
                     <div className="logo"></div>
@@ -13,12 +15,9 @@ export default function Page6() {
                 </div>
                 <div className="name">Mavtrix</div>
                 <div className="content">First Indian video conferencing application with sound spatilisation features</div>
-                <div className="linktext">Here is your Meeting Link : </div>
-                <div className="linkbutton">
-                    <img className="link_img" src={link_img} />
-                    <div className="link_txt">https://your_link_will_be_generated</div>
-                    <img className="copy_img" src={copy_img} />
-                </div>
+                <Link to='login'>
+                    <button className="join" >Join</button>
+                </Link>
             </div>
             <div className="right-box">
                 <div className="images">
@@ -27,6 +26,7 @@ export default function Page6() {
                     <img className="third" src={layout} />
                 </div>
             </div>
+            {/* {showPage2 && <Page2/>} */}
         </div>
     );
 }

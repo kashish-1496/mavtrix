@@ -1,0 +1,41 @@
+
+.feed{
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .feed_heading{
+    color: white;
+    height: 28px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .feedtext{
+    height: 250px;
+    width: 600px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #90909029;
+    margin-top: 40px;
+    margin-left: 300px; 
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .skip{
+    height: 30px;
+    width: 80px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #0055ff;
+    text-align: center;
+    margin-left: 870px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  

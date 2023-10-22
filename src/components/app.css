@@ -300,7 +300,7 @@ img{
 
 .schedule{
   height: 40px;
-  /* width: 220px; */
+  width: 200px;
   text-align: center;
   font-size: 20px;
   background-color: #0055ffe4;
@@ -311,11 +311,28 @@ img{
   margin-left: 320px;
   /* display: flex; */
   align-items: center;
-  padding: 7px 20px;
-  display: inline-flex;
+  padding: 5px 5px;
+  /* display: inline-flex; */
   cursor:pointer;
 }
 
+.scheduletocalender{
+  height: 40px;
+  width: 260px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #0055ffe4;
+  color: white;
+  border:none;
+  border-radius: 10px;
+  /* margin-left: 20px; */
+  /* margin-top: 10px; */
+  /* display: flex; */
+  align-items: center;
+  padding: 5px 5px;
+  /* display: inline-flex; */
+  cursor:pointer;
+}
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Page6>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 .page6{
@@ -456,7 +473,7 @@ img{
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>STARS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-.rating {
+/* .rating {
     margin-top: 25%;
     margin-left: 20%;
     transform: translate(-5%,-5%) rotateY(180deg);
@@ -471,7 +488,7 @@ img{
     display: block;
     cursor: pointer;
     width: 50px;
-    /* background: pink; */
+    /* background: pink; *
 }
 
 .rating label::before{
@@ -497,7 +514,8 @@ img{
 }
 
 .rating label:hover:after,
-/* .rating label :hover ~label:after, */
+/* .rating label :hover ~label:after, 
 .rating input:checked ~label:after{
     opacity: 1;
-}
+} */
+

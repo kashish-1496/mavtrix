@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import Join from './Join';
-import Signin from './Signin';
-import MeetingOptions from './MeetingOptions';
-import FurtherOptions from './FurtherOptions';
-import Link from './Link';
-import CreateNewMeet from './CreateNewMeet';
-import Mymeetings from './MyMeetings';
-import Feedback  from './Feedback';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import "./components/app.css";
+import Pages from './components/pages';
+import BG from './components/bg';
+// import "./components/css-files";
 
 import {
   createBrowserRouter,
@@ -19,45 +15,45 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Feedback />,
+    element: <Pages.Join />,
   },
   {
     path:"/login",
-    element:<Signin/>
+    element:<Pages.Signin/>
   },
   {
     path:"/meetoptions",
-    element:<MeetingOptions/>
+    element:<Pages.MeetingOptions/>
   },
   {
     path:"/FurtherOptions",
-    element:<FurtherOptions/>
+    element:<Pages.FurtherOptions/>
   },
   {
     path:"/Link",
-    element:<Link/>
+    element:<Pages.Link/>
   },
   {
     path:"/CreateNewMeet",
-    element:<CreateNewMeet/>
+    element:<Pages.CreateNewMeet/>
   },
   {
     path:"/MyMeetings",
-    element:<Mymeetings/>
+    element:<Pages.Mymeetings/>
+  },
+  {
+    path:"/bg",
+    element:<BG />
   }
 ]);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const el = document.getElementById('root');
+const root = ReactDOM.createRoot(el);
+el.style.height = "100vh";
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
   </React.StrictMode>
 );
 
 
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();

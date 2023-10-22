@@ -1,9 +1,8 @@
-import "./App.css";
-import layout from './images/ui.png';
-import link_img from './images/link_img.png';
-import copy_img from './images/copy_img.png';
+import "../css-files/App.css";
+import "../css-files/signin.css";
 import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
+
 export default function Page2() {
     return (
         <div className="page2">

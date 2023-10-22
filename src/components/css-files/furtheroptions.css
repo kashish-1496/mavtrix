@@ -1,0 +1,16 @@
+.furtheroptions{
+    width: 270px;
+    height:180px;
+    display: inline-block;
+  }
+  
+  .opt{
+    width: 270px;
+    text-align: left;
+    color: white;
+    background: transparent;
+    font-size: 18px;
+    margin-bottom: 10px;
+    /* border: 1px solid white; */
+    cursor: pointer;
+  }

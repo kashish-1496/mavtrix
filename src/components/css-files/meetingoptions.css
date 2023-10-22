@@ -1,0 +1,44 @@
+.meeting_code{
+    height: 40px;
+    width: 290px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #0055ff1a;
+    color: #0055ff;
+    /* border: 1px solid #0055ff; */
+    border-radius: 10px;
+    margin-left: 100px;
+    
+  }
+  
+  .meeting_code ::placeholder{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .meeting_code input{
+    font-size: 16px;
+    border-radius: 10px;
+    width: 99%;
+    height: 98%;
+    background: transparent;
+    border: none;
+    color: white;
+    /* position: relative; */
+  }
+  
+  .meeting_options{
+    height: 40px;
+    width: 270px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #0055ffe4;
+    color: white;
+    border:none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  

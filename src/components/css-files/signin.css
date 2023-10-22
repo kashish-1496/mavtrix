@@ -1,0 +1,89 @@
+
+.left-box2{
+    width:60vw;
+  }
+  
+  .page2{
+    display: flex;
+  }
+  
+  .heading{
+    font-size: 4em;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    margin-top: 120px;
+    font-weight: bold;
+  }
+  
+  .points {
+    white-space:nowrap;
+    width:60vw;
+    overflow:hidden;
+    margin-top:40px;
+  }
+  
+  .point{
+    width:60vw;
+    font-size: 24px;
+    color: #0f0; 
+    margin-top: 12px;
+    display:inline-block;
+    text-align: center;
+    font-size:2em;
+    font-weight: bold; 
+  }
+  
+  .point:nth-child(1){
+    animation: features 8s infinite linear;
+  }
+  
+  .right-box2{
+    width: 30vw;
+    height: 100vh;
+    flex:1;
+    background-color: #99999920;
+    /* border: 1px solid white;   */
+    text-align: center;
+  }
+  
+  .signin{
+    height: 40px;
+    width: 140px;
+    color: white;
+    background-color: #0055ff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin-top:50vh ;
+  } 
+  
+  @keyframes features{
+    0%, 10%{
+      margin-left:0%;
+    }
+    15%, 25%{
+      margin-left:-100%;
+    }
+    30%,40%{
+      margin-left:-200%;
+    }
+    45%,55%{
+      margin-left:-300%;
+    }
+    60%,70%{
+      margin-left:-400%;
+    }
+    75%,85%{
+      margin-left:-500%;
+    }
+    90%,100%{
+      margin-left:-600%;
+    }
+    105%,115%{
+      margin-left:-700%;
+    }
+    120%,130%{
+      margin-left:-800%;
+    }
+  }

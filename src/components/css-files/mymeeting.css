@@ -1,0 +1,132 @@
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MY MEETING PAGE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.page7{
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    /* display: flex; */
+  }
+  
+  .mymeethead{
+    width:350px ;
+    height: 48px;
+    font-size: 34px;
+    font-weight: 400;
+    color: white;
+    background-color: #0055ff;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 440px;
+  }
+  
+  .blackbox{
+    width: 280px;
+    height: 70%;
+    border: none;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 150px;
+    left:478px ;
+  }
+
+  .leftdata{
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  
+  .rightdata{
+    width: 50vw;
+    margin-top: 30px;
+    
+  }
+
+  .meet1{
+    height: 130px;
+    width: 260px;
+    /* background-color: #888888; */
+    background: transparent;
+    border: 1px solid white;
+    margin: 10px;
+    display: flex;
+    position: relative;
+  }
+  
+  .agenda{
+    height: 20px;
+    width: 90px;
+    margin-bottom: 10px;
+    color: white;
+    /* border: 1px solid #000; */
+  }
+  .date{
+    margin-bottom: 10px;
+    height: 20px;
+    width: 90px;
+    color: white;
+    /* border: 1px solid #000; */
+  }
+  .time{
+    height: 20px;
+    color: white;
+    width: 90px;
+    /* border: 1px solid #000; */
+  }
+  .agenda-info{
+    color: white;
+    height: 20px;
+    width: 120px;
+    margin-bottom: 10px;
+    /* border: 1px solid #000; */
+  }
+  .date-info{
+    color: white;
+    height: 20px;
+    width: 120px;
+    margin-bottom: 10px;
+    /* border: 1px solid #000; */
+  }
+  .time-info{
+    height: 20px;
+    color: white;
+    width: 120px;
+    /* border: 1px solid #000; */
+  }
+  
+  
+  .meet2{
+    height: 130px;
+    width: 260px;
+    background:transparent;
+    display: flex;
+    margin: 10px;
+    border: 1px solid white;
+  }
+  
+  .meet3{
+    height: 130px;
+    width: 260px;
+    background:transparent;
+    margin: 10px;
+    display: flex;
+    border: 1px solid white;
+    /* background-color: #888888; */
+  }
+
+  
+  
+  .back{
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #0055ff;
+    text-align: center;
+    position: absolute;
+    left: 800px;
+    top: 550px;
+  }
+  

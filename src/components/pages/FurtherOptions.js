@@ -1,12 +1,11 @@
-import "./App.css";
-import layout from './images/ui.png';
-import link_img from './images/link_img.png';
-import copy_img from './images/copy_img.png';
+import "../css-files/App.css";
+import "../css-files/furtheroptions.css";
+import layout from '../images/ui.png';
 import React from "react";
 import { Link } from "react-router-dom";
+
 export default function Page4() {
     return (
-
         <div className="page4">
             <div className="left-box">
                 <div className="logo-container">
@@ -27,7 +26,7 @@ export default function Page4() {
                         </Link>
                         <Link to='/CreateNewMeet'>
                             <div className="opt" >~ Start a new meeting for later</div>
-                            <div className="opt" >+ Schedule in Google Calender</div>
+                            {/* <div className="opt" >+ Schedule in Google Calender</div> */}
                         </Link>
                         <Link to='/MyMeetings'>
                             <div className="opt" >+ My Meetings</div>

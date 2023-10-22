@@ -1,12 +1,9 @@
-import "./App.css";
-import "./star.html";
-import "./star.css";
+import "../css-files/App.css";
+import "../css-files/feedback.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Feedback() {
-
-
     return (
         <div>
             <div className="feed">
@@ -18,7 +15,7 @@ export default function Feedback() {
                 <div className="feedtext">Your Feedback -</div>
                 <div className="skip">Skip</div>
 
-               <form action ="./star.html"></form>
+               
             </div>
         </div>
     );
